@@ -35,6 +35,7 @@ void	push(t_stack *stack, int value);
 int	pop(t_stack *stack);
 int	is_sorted(t_stack *stack);
 void	sort_stack(t_stack *a, t_stack *b);
+void	clear_stack(t_stac  *stack);
 
 void	sa(t_stack *a);
 void	sb(t_stack *b);

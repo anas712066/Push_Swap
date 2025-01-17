@@ -44,3 +44,18 @@ int	parse_arguments(t_stack *a, int argc, char **argv)
 	}
 	return (1);
 }
+
+void	clear_stack(t_stack *stack)
+{
+	t_node	*current;
+	t_node	*next;
+
+	current = stack->top;
+	while (current)
+	{
+		next = current->next;
+		free(current);
+		current = next;
+	}
+	free(stack);
+}

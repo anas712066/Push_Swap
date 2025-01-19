@@ -6,7 +6,7 @@
 /*   By: mumajeed <mumajeed@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/12 16:36:14 by mumajeed          #+#    #+#             */
-/*   Updated: 2025/01/12 18:37:00 by mumajeed         ###   ########.fr       */
+/*   Updated: 2025/01/19 12:43:58 by mumajeed         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@
 # include "../libft/libft.h"
 # include <stlib.h>
 # include <unistd.h>
+# include <stlib.h>
+# include <stdio.h>
 
 typedef struct s_node
 {
@@ -32,10 +34,10 @@ typedef struct s_stack
 void	error_exit(const char *message);
 t_stack	*init_stack(void);
 void	push(t_stack *stack, int value);
-int	pop(t_stack *stack);
-int	is_sorted(t_stack *stack);
+int		pop(t_stack *stack);
+int		is_sorted(t_stack *stack);
 void	sort_stack(t_stack *a, t_stack *b);
-void	clear_stack(t_stac  *stack);
+void	clear_stack(t_stac *stack);
 
 void	sa(t_stack *a);
 void	sb(t_stack *b);

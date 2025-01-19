@@ -6,7 +6,7 @@
 /*   By: mumajeed <mumajeed@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/12 16:36:14 by mumajeed          #+#    #+#             */
-/*   Updated: 2025/01/19 12:43:58 by mumajeed         ###   ########.fr       */
+/*   Updated: 2025/01/19 20:03:54 by mumajeed         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,6 @@
 # include "../libft/libft.h"
 # include <stlib.h>
 # include <unistd.h>
-# include <stlib.h>
 # include <stdio.h>
 
 typedef struct s_node

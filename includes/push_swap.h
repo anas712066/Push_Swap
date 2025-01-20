@@ -17,6 +17,7 @@
 # include <stlib.h>
 # include <unistd.h>
 # include <stdio.h>
+# include "../ft_printf/includes/ft_printf.h"
 
 typedef struct s_node
 {

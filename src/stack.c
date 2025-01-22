@@ -6,7 +6,7 @@
 /*   By: mumajeed <mumajeed@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/19 20:16:03 by mumajeed          #+#    #+#             */
-/*   Updated: 2025/01/22 15:03:45 by mumajeed         ###   ########.fr       */
+/*   Updated: 2025/01/22 21:12:28 by mumajeed         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,17 +39,19 @@ void	push(t_stack *stack, int value)
 
 int	pop(t_stack *stack)
 {
-    t_node	*top_node;
-    int	value;
+	t_node	*top_node;
+	int	value;
 
-    if (stack->size == 0)
-	error_exit("Stack underflow");
+	if (stack->size == 0)
+	{
+		error_exit("Stack underflow");
+	}
 	top_node = stack->top;
 	value = top_node->value;
-    stack->top = top_node->next;
-    free(top_node);
-    stack->size--;
-    return (value);
+	stack->top = top_node->next;
+	free(top_node);
+	stack->size--;
+	return (value);
 }
 
 int	is_sorted(t_stack *stack)
@@ -87,19 +89,4 @@ void	clear_node(t_node *node, void (*del)(void*))
 	{
 		del(node);
 	}
-}
-
-void	clear_stack(t_stack *stack)
-{
-	t_node	*current;
-	t_node	*next;
-
-	current = stack->top;
-	while (current)
-	{
-		next = current->next;
-		clear_node(current, free);
-		current = next;
-	}
-	free(stack);
 }

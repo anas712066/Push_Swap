@@ -6,7 +6,7 @@
 /*   By: mumajeed <mumajeed@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/20 11:25:47 by mumajeed          #+#    #+#             */
-/*   Updated: 2025/01/21 12:04:28 by mumajeed         ###   ########.fr       */
+/*   Updated: 2025/01/22 21:09:06 by mumajeed         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,8 @@ void	sa(t_stack *a)
 
 	if (a->size < 2)
 		return ;
-	temp = aa->top->value;
+	temp = a->top->value;
 	a->top->value = a->top->next->value;
-	a->top->next->value = tempp;
+	a->top->next->value = temp;
 	ft_printf("sa\n");
 }

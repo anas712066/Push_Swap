@@ -20,7 +20,6 @@ SRC_FILES := \
     parser.c \
     error.c \
     stack.c \
-    sort_stack.c \
     operations/sa.c \
     operations/sb.c \
     operations/ss.c \
@@ -41,7 +40,7 @@ all: $(NAME)
 
 $(LIBFT):
 	@echo "Compiling libft..."
-	@$(MAKE) -C $(LIBFT_DIR)
+	@$(MAKE) -C $(LIBFT_DIR) bonus
 
 $(FT_PRINTF):
 	@echo "Compiling ft_printf..."

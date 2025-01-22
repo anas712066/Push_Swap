@@ -1,30 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   rb.c                                               :+:      :+:    :+:   */
+/*   rr.c                                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mumajeed <mumajeed@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/01/21 12:18:14 by mumajeed          #+#    #+#             */
-/*   Updated: 2025/01/22 13:34:17 by mumajeed         ###   ########.fr       */
+/*   Created: 2025/01/22 13:34:39 by mumajeed          #+#    #+#             */
+/*   Updated: 2025/01/22 13:35:37 by mumajeed         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/push_swap.h"
 
-void	rb(t_stack *b)
+void	rr(t_stack *a, t_Stack *b)
 {
-	t_node	*top_node;
-	t_node	*last_node;
-
-	if (b->size < 2)
-		return ;
-	top_node = b->top;
-	b->top = top_node->next;
-	last_node = b->top;
-	while (last_node->next)
-		last_node = last_node->next;
-	last_node->next = top_node;
-	top_node->next = NULL;
-	ft_printf("rb\n");
+	ra(a);
+	rb(b)
+	ft_printf("rr\n");
 }

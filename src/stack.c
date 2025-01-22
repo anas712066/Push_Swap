@@ -6,7 +6,7 @@
 /*   By: mumajeed <mumajeed@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/19 20:16:03 by mumajeed          #+#    #+#             */
-/*   Updated: 2025/01/19 20:44:19 by mumajeed         ###   ########.fr       */
+/*   Updated: 2025/01/22 13:48:46 by mumajeed         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,4 +64,19 @@ void	sort_stack(t_stack *a, t_stack *b)
 	}
 	while (b->size > 0)
 		pa(a, b);
+}
+
+void	clear_stack(t_stack *stack)
+{
+	t_list	*current;
+	t_list	*next;
+
+	current = stack->top;
+	while (current)
+	{
+		next = current->next;
+		ft_lstdelone(current, free);
+		current = next;
+	}
+	free(stack);
 }

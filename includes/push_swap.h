@@ -6,7 +6,7 @@
 /*   By: mumajeed <mumajeed@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/12 16:36:14 by mumajeed          #+#    #+#             */
-/*   Updated: 2025/01/22 13:49:47 by mumajeed         ###   ########.fr       */
+/*   Updated: 2025/01/22 15:01:19 by mumajeed         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,9 @@
 # define PUSH_SWAP_H
 
 # include "../libft/libft.h"
-# include <stlib.h>
+# include <stdlib.h>
 # include <unistd.h>
 # include "../ft_printf/includes/ft_printf.h"
-# include "../libft/libft_bonus.h"
 
 typedef struct s_node
 {
@@ -37,7 +36,9 @@ void	push(t_stack *stack, int value);
 int		pop(t_stack *stack);
 int		is_sorted(t_stack *stack);
 void	sort_stack(t_stack *a, t_stack *b);
-void	clear_stack(t_stac *stack);
+void	clear_stack(t_stack *stack);
+int		parse_arguments(t_stack *a, int argc, char **argv);
+void	clear_node(t_node *node, void (*del)(void*));
 
 void	sa(t_stack *a);
 void	sb(t_stack *b);

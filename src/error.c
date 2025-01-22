@@ -15,7 +15,6 @@
 void	error_exit(const char *message)
 {
 	if (message)
-	{
-		write
-	}
+		ft_printf("Error: %s\n", message);
+	exit(EXIT_FAILURE);
 }

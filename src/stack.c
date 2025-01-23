@@ -6,7 +6,7 @@
 /*   By: mumajeed <mumajeed@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/19 20:16:03 by mumajeed          #+#    #+#             */
-/*   Updated: 2025/01/22 21:12:28 by mumajeed         ###   ########.fr       */
+/*   Updated: 2025/01/23 11:26:22 by mumajeed         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ void	push(t_stack *stack, int value)
 int	pop(t_stack *stack)
 {
 	t_node	*top_node;
-	int	value;
+	int		value;
 
 	if (stack->size == 0)
 	{
@@ -68,19 +68,6 @@ int	is_sorted(t_stack *stack)
 		current = current->next;
 	}
 	return (1);
-}
-
-void	sort_stack(t_stack *a, t_stack *b)
-{
-	while (!is_sorted(a))
-	{
-		if (a->top->value > a->top->next->value)
-			sa(a);
-		else
-			pb(a, b);
-	}
-	while (b->size > 0)
-		pa(a, b);
 }
 
 void	clear_node(t_node *node, void (*del)(void*))

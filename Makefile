@@ -20,6 +20,12 @@ SRC_FILES := \
     parser.c \
     error.c \
     stack.c \
+    sort_stack.c \
+    find_partial_median.c \
+    find_max.c \
+    bring_to_top.c \
+    quicksort.c \
+    extract_values.c \
     operations/sa.c \
     operations/sb.c \
     operations/ss.c \

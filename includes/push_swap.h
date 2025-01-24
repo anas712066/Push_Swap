@@ -6,7 +6,7 @@
 /*   By: mumajeed <mumajeed@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/12 16:36:14 by mumajeed          #+#    #+#             */
-/*   Updated: 2025/01/22 15:01:19 by mumajeed         ###   ########.fr       */
+/*   Updated: 2025/01/24 20:24:07 by mumajeed         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,6 +39,13 @@ void	sort_stack(t_stack *a, t_stack *b);
 void	clear_stack(t_stack *stack);
 int		parse_arguments(t_stack *a, int argc, char **argv);
 void	clear_node(t_node *node, void (*del)(void*));
+int		find_partial_median(t_stack *a, int part, int total_parts);
+int		find_max(t_stack *stack);
+void	bring_to_top(t_stack *stack, int value);
+void	swap(int *a, int *b);
+int		partition(int *arr, int low, int high);
+void	quicksort(int *arr, int low, int high);
+int		*extract_values(t_stack *a, int start, int size);
 
 void	sa(t_stack *a);
 void	sb(t_stack *b);

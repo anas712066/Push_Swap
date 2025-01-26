@@ -6,7 +6,7 @@
 /*   By: mumajeed <mumajeed@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/12 16:36:14 by mumajeed          #+#    #+#             */
-/*   Updated: 2025/01/24 20:24:07 by mumajeed         ###   ########.fr       */
+/*   Updated: 2025/01/26 19:34:57 by mumajeed         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@
 # include <stdlib.h>
 # include <unistd.h>
 # include "../ft_printf/includes/ft_printf.h"
+# include <limits.h>
 
 typedef struct s_node
 {
@@ -47,6 +48,7 @@ int		partition(int *arr, int low, int high);
 void	quicksort(int *arr, int low, int high);
 int		*extract_values(t_stack *a, int start, int size);
 int		find_position(t_stack *stack, int value);
+int		quickselect(int *arr, int left, int right, int k);
 
 void	sa(t_stack *a);
 void	sb(t_stack *b);

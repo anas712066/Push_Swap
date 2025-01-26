@@ -18,6 +18,8 @@ void	bring_to_top(t_stack *stack, int value)
 	int	mid;
 
 	pos = find_position(stack, value);
+	if (pos == -1)
+		error_exit("Value not found in stack in bring_to_top");
 	mid = stack->size / 2;
 	if (pos <= mid)
 	{
@@ -26,7 +28,8 @@ void	bring_to_top(t_stack *stack, int value)
 	}
 	else
 	{
-		while (pos++ < stack->size)
+		pos = stack->size - pos;
+		while (pos-- > 0)
 			rra(stack);
 	}
 }

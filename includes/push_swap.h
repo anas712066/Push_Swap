@@ -46,6 +46,7 @@ void	swap(int *a, int *b);
 int		partition(int *arr, int low, int high);
 void	quicksort(int *arr, int low, int high);
 int		*extract_values(t_stack *a, int start, int size);
+int		find_position(t_stack *stack, int value);
 
 void	sa(t_stack *a);
 void	sb(t_stack *b);

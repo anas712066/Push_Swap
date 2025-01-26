@@ -25,6 +25,7 @@ SRC_FILES := \
     find_max.c \
     bring_to_top.c \
     quicksort.c \
+    find_position.c \
     extract_values.c \
     operations/sa.c \
     operations/sb.c \

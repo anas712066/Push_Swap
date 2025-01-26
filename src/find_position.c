@@ -1,27 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   find_partial_median.c                              :+:      :+:    :+:   */
+/*   find_position.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mumajeed <mumajeed@student.42barcelon      +#+  +:+       +#+        */
+/*   By: mumajeed <mumajeed@student.42barcelona.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/01/24 20:04:02 by mumajeed          #+#    #+#             */
-/*   Updated: 2025/01/24 20:05:35 by mumajeed         ###   ########.fr       */
+/*   Created: 2025/01/26 13:18:24 by mumajeed          #+#    #+#             */
+/*   Updated: 2025/01/26 13:29:59 by mumajeed         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/push_swap.h"
 
-int	find_partial_median(t_stack *a, int part, int total_parts)
+int	find_position(t_stack *stack, int value)
 {
-	int	*values;
-	int	size;
-	int	median;
+	t_node	*current;
+	int		position;
 
-	size = a->size / total_parts;
-	values = extract_values(a, part * size, size);
-	quicksort(values, 0, size - 1);
-	median = values[size / 2];
-	free(values);
-	return (median);
+	current = stack->top;
+	position = 0;
+	while (current)
+	{
+		if (current->value == value)
+			return (position);
+		current = current->next;
+		position++;
+	}
+	return (-1);
 }
